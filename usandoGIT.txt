@@ -1,0 +1,27 @@
+- Baixar git da internet
+
+
+na pasta GITBASH
+
+Cria pasta de repositorio
+
+git clone git://github.com/cacleverson/joo-20180618.git
+
+em vermelho mostra arquivos para subir para o repositorio
+git status
+
+git add *
+marca os arquivos para subir para o repositorio
+
+em verde mostra arquivos marcados para o repositorio
+git status
+
+git commit -m "primeiro_comit"
+
+git push
+
+arquivo .gitgnore
+seleciona arquivos na pasta para não subir para o repositorio
+
+/.metadata/ 
+/RemoteSystemsTempFiles/ 
