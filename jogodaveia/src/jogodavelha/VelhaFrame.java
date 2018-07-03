@@ -20,7 +20,12 @@ import javax.swing.JLabel;
  */
 public class VelhaFrame extends JFrame {
 
-    private JButton[] button;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private JButton[] button;
     private JButton button1;
     private JLabel jogador1;
     private JLabel jogador2;

@@ -24,15 +24,15 @@ public class JogoDaVelha {
 	private JFrame frame;
 	private JTextField xPontos;
 	private JTextField oPontos;
-	private String lblBtn1;
-	private String lblBtn2;
-	private String lblBtn3;
-	private String lblBtn4;
-	private String lblBtn5;
-	private String lblBtn6;
-	private String lblBtn7;
-	private String lblBtn8;
-	private String lblBtn9;
+	private String lblBtn1 = "";
+	private String lblBtn2 = "";
+	private String lblBtn3 = "";
+	private String lblBtn4 = "";
+	private String lblBtn5 = "";
+	private String lblBtn6 = "";
+	private String lblBtn7 = "";
+	private String lblBtn8 = "";
+	private String lblBtn9 = "";
 	private String jogadorDaVez = "X";
 	private int xCount;
 	private int oCount;
@@ -80,6 +80,22 @@ public class JogoDaVelha {
 		panel_1.setLayout(new BorderLayout(0, 0));
 
 		JButton btn1 = new JButton("");
+		btn1.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent arg0) {
+			    btn1.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn1.setForeground(Color.RED);
+			    } else {
+					btn1.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn1 = btn1.getText();
+			    conferirJogo();
+			
+			}
+		});
 		btn1.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		panel_1.add(btn1, BorderLayout.CENTER);
 
@@ -89,6 +105,23 @@ public class JogoDaVelha {
 		panel_2.setLayout(new BorderLayout(0, 0));
 
 		JButton btn2 = new JButton("");
+		btn2.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+			
+				btn2.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn2.setForeground(Color.RED);
+			    } else {
+					btn2.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn2 = btn2.getText();
+			    conferirJogo();
+			
+			}
+		});
 		btn2.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		panel_2.add(btn2, BorderLayout.CENTER);
 
@@ -98,6 +131,22 @@ public class JogoDaVelha {
 		panel_3.setLayout(new BorderLayout(0, 0));
 
 		JButton btn3 = new JButton("");
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				btn3.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn3.setForeground(Color.RED);
+			    } else {
+					btn3.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn3 = btn3.getText();
+			    conferirJogo();
+			
+			}
+		});
 		btn3.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		panel_3.add(btn3, BorderLayout.CENTER);
 
@@ -128,6 +177,22 @@ public class JogoDaVelha {
 		panel_7.setLayout(new BorderLayout(0, 0));
 
 		JButton btn4 = new JButton("");
+		btn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn4.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn4.setForeground(Color.RED);
+			    } else {
+					btn4.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn4 = btn4.getText();
+			    conferirJogo();
+			
+			
+			}
+		});
 		btn4.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		panel_7.add(btn4, BorderLayout.CENTER);
 
@@ -137,6 +202,22 @@ public class JogoDaVelha {
 		panel_6.setLayout(new BorderLayout(0, 0));
 
 		JButton btn5 = new JButton("");
+		btn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn5.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn5.setForeground(Color.RED);
+			    } else {
+					btn5.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn5 = btn5.getText();
+			    conferirJogo();
+			
+			
+			}
+		});
 		btn5.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		panel_6.add(btn5, BorderLayout.CENTER);
 
@@ -146,6 +227,23 @@ public class JogoDaVelha {
 		panel_8.setLayout(new BorderLayout(0, 0));
 
 		JButton btn6 = new JButton("");
+		btn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn6.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn6.setForeground(Color.RED);
+			    } else {
+					btn6.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn6 = btn6.getText();
+			    conferirJogo();
+			
+			
+			
+			}
+		});
 		btn6.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		panel_8.add(btn6, BorderLayout.CENTER);
 
@@ -154,7 +252,7 @@ public class JogoDaVelha {
 		panel.add(panel_9);
 		panel_9.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblO = new JLabel("O");
+		JLabel lblO = new JLabel("JOGADOR 2");
 		lblO.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		lblO.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblO, BorderLayout.CENTER);
@@ -180,6 +278,17 @@ public class JogoDaVelha {
 		btn7.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				btn7.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn7.setForeground(Color.RED);
+			    } else {
+					btn7.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn7 = btn7.getText();
+			    conferirJogo();
+			
 			}
 		});
 		panel_11.add(btn7, BorderLayout.CENTER);
@@ -193,6 +302,19 @@ public class JogoDaVelha {
 		btn8.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				btn8.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn8.setForeground(Color.RED);
+			    } else {
+					btn8.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn8 = btn8.getText();
+			    conferirJogo();
+			
+			
+			
 			}
 		});
 		panel_12.add(btn8, BorderLayout.CENTER);
@@ -203,6 +325,22 @@ public class JogoDaVelha {
 		panel_13.setLayout(new BorderLayout(0, 0));
 
 		JButton btn9 = new JButton("");
+		btn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn9.setText(jogadorDaVez);
+			    if (jogadorDaVez.equalsIgnoreCase("X")) {
+			    	btn9.setForeground(Color.RED);
+			    } else {
+					btn9.setForeground(Color.BLUE);
+				}	
+		        
+			    escolherJogador();
+			    lblBtn9 = btn9.getText();
+			    conferirJogo();
+			
+			
+			}
+		});
 		btn9.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		panel_13.add(btn9, BorderLayout.CENTER);
 
@@ -243,7 +381,7 @@ public class JogoDaVelha {
 
 		JButton btnExit = new JButton("Exit");
 		btnExit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent arg0) {
 				// 2
 				frame = new JFrame("Exit");
 				if (JOptionPane.showConfirmDialog(frame, "Quer sair mesmo?", "Jogo da Velha",
@@ -274,12 +412,12 @@ public class JogoDaVelha {
 
 	private void marcarPontos() {
 		xPontos.setText(String.valueOf(xCount));
-		oPontos.setText(String.valueOf(oPontos));
+		oPontos.setText(String.valueOf(oCount));
 	}
 
 	private void escolherJogador() {
 		if (jogadorDaVez.equalsIgnoreCase("X")) {
-			jogadorDaVez = "0";
+			jogadorDaVez = "O";
 		} else {
 			jogadorDaVez = "X";
 
@@ -287,24 +425,63 @@ public class JogoDaVelha {
 	}
 
 	private void conferirJogo() {
-		String b1 = lblBtn1;
-		String b2 = lblBtn2;
-		String b3 = lblBtn3;
-		String b4 = lblBtn4;
-		String b5 = lblBtn5;
-		String b6 = lblBtn6;
-		String b7 = lblBtn7;
-		String b8 = lblBtn8;
-		String b9 = lblBtn9;
+		String b1 = lblBtn1 == null? "" : lblBtn1;
+		String b2 = lblBtn2 == null? "" : lblBtn2;
+		String b3 = lblBtn3 == null? "" : lblBtn3;
+		String b4 = lblBtn4 == null? "" : lblBtn4;
+		String b5 = lblBtn5 == null? "" : lblBtn5;
+		String b6 = lblBtn6 == null? "" : lblBtn6;
+		String b7 = lblBtn7 == null? "" : lblBtn7;
+		String b8 = lblBtn8 == null? "" : lblBtn8;
+		String b9 = lblBtn9 == null? "" : lblBtn9;
 
 		// Player1
-		if (b1.equalsIgnoreCase("X") && b2.equalsIgnoreCase("X") && b3.equalsIgnoreCase("X")) {
-			JOptionPane.showMessageDialog(frame, "Player 1 ganhou!", "Jogo da Velha", JOptionPane.INFORMATION_MESSAGE);
+		if ((b1.equalsIgnoreCase("X") && b2.equalsIgnoreCase("X") && b3.equalsIgnoreCase("X")) ||
+		(b4.equalsIgnoreCase("X") && b5.equalsIgnoreCase("X") && b6.equalsIgnoreCase("X")) ||
+		(b7.equalsIgnoreCase("X") && b8.equalsIgnoreCase("X") && b9.equalsIgnoreCase("X")) ||
+		(b1.equalsIgnoreCase("X") && b5.equalsIgnoreCase("X") && b9.equalsIgnoreCase("X")) ||
+		(b7.equalsIgnoreCase("X") && b5.equalsIgnoreCase("X") && b3.equalsIgnoreCase("X")) ||
+		(b1.equalsIgnoreCase("X") && b4.equalsIgnoreCase("X") && b7.equalsIgnoreCase("X")) ||
+		(b2.equalsIgnoreCase("X") && b5.equalsIgnoreCase("X") && b8.equalsIgnoreCase("X")) ||
+		(b3.equalsIgnoreCase("X") && b6.equalsIgnoreCase("X") && b9.equalsIgnoreCase("X")))
+		{
+			JOptionPane.showMessageDialog(
+					frame, 
+					"Player 1 ganhou!", 
+					"Jogo da Velha", 
+					JOptionPane.INFORMATION_MESSAGE);
+			
 			xCount++;
 			marcarPontos();
 			gameOver();
 			;
 
 		}
+	
+		// Player2
+		if ((b1.equalsIgnoreCase("O") && b2.equalsIgnoreCase("O") && b3.equalsIgnoreCase("O")) ||
+		(b4.equalsIgnoreCase("O") && b5.equalsIgnoreCase("O") && b6.equalsIgnoreCase("O")) ||
+		(b7.equalsIgnoreCase("O") && b8.equalsIgnoreCase("O") && b9.equalsIgnoreCase("O")) ||
+		(b1.equalsIgnoreCase("O") && b5.equalsIgnoreCase("O") && b9.equalsIgnoreCase("O")) ||
+		(b7.equalsIgnoreCase("O") && b5.equalsIgnoreCase("O") && b3.equalsIgnoreCase("O")) ||
+		(b1.equalsIgnoreCase("O") && b4.equalsIgnoreCase("O") && b7.equalsIgnoreCase("O")) ||
+		(b2.equalsIgnoreCase("O") && b5.equalsIgnoreCase("O") && b8.equalsIgnoreCase("O")) ||
+		(b3.equalsIgnoreCase("O") && b6.equalsIgnoreCase("O") && b9.equalsIgnoreCase("O")))
+		{
+			JOptionPane.showMessageDialog(
+					frame, 
+					"Player 2 ganhou!", 
+					"Jogo da Velha", 
+					JOptionPane.INFORMATION_MESSAGE);
+			
+			oCount++;
+			marcarPontos();
+			gameOver();
+			;
+
+		}
+	
+	
+	
 	}
 }
